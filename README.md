@@ -1,1 +1,1 @@
-# jazbot-discord
+# HavenBot
