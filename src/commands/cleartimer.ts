@@ -2,10 +2,6 @@ import * as fs from "fs";
 import { Message } from "discord.js";
 import { Command, CommandMessage, CommandoClient } from "discord.js-commando";
 
-/*
-!cleartimer name
-*/
-
 export class ClearTimerCommand extends Command {
 	constructor(client:CommandoClient) {
 		super(client, {
@@ -14,10 +10,6 @@ export class ClearTimerCommand extends Command {
 			memberName: "cleartimer",
 			description: "Clear a timer by name",
 			examples: ["clear magicbeans"],
-			throttling: {
-				usages: 5,
-				duration: 10
-			},
 			args: [
 				{
 					key: "name",
@@ -28,7 +20,7 @@ export class ClearTimerCommand extends Command {
 		});
 	}
 
-	public async run(msg: CommandMessage, { name }:{name:string}): Promise<Message | Message[]> {
+	public run(msg: CommandMessage, { name }:{name:string}): Promise<Message | Message[]> {
 		let store = require("../../store");
 
 		if (name in store.timers){
