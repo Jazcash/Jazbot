@@ -1,0 +1,35 @@
+{
+  "name": "jazbot-discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/argparse": "^1.0.33",
+    "@types/node": "^8.0.54",
+    "@types/request-promise-native": "^1.0.10",
+    "ascii-table": "0.0.9",
+    "blizzard.js": "^2.0.3",
+    "discord.js-commando": "^0.10.0",
+    "humanize-duration": "^3.17.0",
+    "moment": "^2.24.0",
+    "node-opus": "0.2.7",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "request-promise-native": "^1.0.5",
+    "rls-api": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jazcash/jazbot-discord.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jazcash/jazbot-discord/issues"
+  },
+  "homepage": "https://github.com/Jazcash/jazbot-discord#readme"
+}
