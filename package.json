@@ -5,17 +5,18 @@
   "main": "index.js",
   "dependencies": {
     "ascii-table": "0.0.9",
+    "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
     "humanize-duration": "^3.17.0",
-    "moment": "^2.24.0"
-  },
-  "devDependencies": {
-    "@types/argparse": "^1.0.33",
+		"moment": "^2.24.0",
+		"@types/argparse": "^1.0.33",
     "@types/node": "^8.0.54",
     "@types/request-promise-native": "^1.0.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --w",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
