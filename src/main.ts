@@ -7,7 +7,8 @@ let config = require("../config");
 
 const havenbot = new CommandoClient({
 	commandPrefix: "!",
-	owner: "147075197378232320"
+	owner: "147075197378232320",
+	unknownCommandResponse: false
 });
 
 if (!fs.existsSync("store.json")){
