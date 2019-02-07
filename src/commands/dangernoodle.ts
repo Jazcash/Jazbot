@@ -17,7 +17,7 @@ export class DangerNoodleCommand extends Commando.Command {
 		if (!vc) return msg.reply("You need to be connected to a voice channel");
 
 		vc.join().then(connection => {
-			const dispatcher = connection.playFile("./sounds/dangernoodle.ogg");
+			const dispatcher = connection.playFile("./sounds/dangernoodle.ogg", { volume: 0.25 });
 			dispatcher.on("end", () => connection.disconnect());
 		});
 	}
