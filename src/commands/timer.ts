@@ -111,8 +111,9 @@ export class TimerCommand extends Command {
 				store.notified.push(name);
 				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
 				channel.send(`**${name}** timer will expire in 1 hour. ${mentions}`);
-				fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
 			}
 		}
+
+		fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
 	}
 };
