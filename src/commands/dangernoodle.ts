@@ -19,6 +19,6 @@ export class DangerNoodleCommand extends Commando.Command {
 		vc.join().then(connection => {
 			const dispatcher = connection.playFile("./sounds/dangernoodle.ogg", { volume: 0.25 });
 			dispatcher.on("end", () => connection.disconnect());
-		});
+		}).catch(console.error);
 	}
 }
