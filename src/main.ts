@@ -28,6 +28,10 @@ havenbot.on("ready", () => {
 	console.log("HavenBot is ready!");
 });
 
+havenbot.on("error", (err) => {
+	console.log(err);
+});
+
 havenbot.on("error", console.error);
 
 havenbot.login(config.discordkey);
