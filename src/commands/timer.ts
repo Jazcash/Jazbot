@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { Message } from "discord.js";
+import { Message, Collection, VoiceChannel } from "discord.js";
 import { Command, CommandMessage, CommandoClient } from "discord.js-commando";
 import * as moment from "moment";
 let AsciiTable = require('ascii-table');
@@ -101,6 +101,8 @@ export class TimerCommand extends Command {
 			return;
 		}
 
+		if (!("notified6h" in store)) store.notified6h = [];
+
 		let now = new Date();
 		for (let name in store.timers){
 			let then = new Date(store.timers[name]);
@@ -111,6 +113,30 @@ export class TimerCommand extends Command {
 				store.notified.push(name);
 				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
 				channel.send(`**${name}** timer will expire in 1 hour. ${mentions}`);
+			} else if (moment(then).diff(now, "minutes") < 360 && !store.notified6h.includes(name)){
+				store.notified6h.push(name);
+
+				let guild = this.client.guilds.get(config.guild);
+				if (!guild) return;
+
+				let raff = guild.members.find("id", "147075197378232320");
+				if (!raff) return;
+
+				channel.send(`**${name}** timer will expire in 6 hours. <@${raff.id}>`);
+
+				let voiceChannels = guild.channels.filter(channel => channel.type === "voice") as Collection<string, VoiceChannel>;
+				if (!voiceChannels) return;
+
+				let activeChannels = voiceChannels.filter(voiceChannel => voiceChannel.joinable && voiceChannel.members.size > 0);
+				if (!activeChannels) return;
+
+				let popularChannel = activeChannels.sort((a, b) => (a.members.size < b.members.size) ? 1 : (a.members.size > b.members.size) ? -1 : 0).first();
+				if (!popularChannel) return;
+
+				popularChannel.join().then(connection => {
+					const dispatcher = connection.playFile("./sounds/6hourwarning.mp3", { volume: 0.65 });
+					dispatcher.on("end", () => connection.disconnect());
+				}).catch(console.error);
 			}
 		}
 

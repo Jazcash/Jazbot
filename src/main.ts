@@ -12,7 +12,7 @@ const havenbot = new CommandoClient({
 });
 
 if (!fs.existsSync("store.json")){
-	let store = {timers:{},notified:[],notify:[]};
+	let store = {timers:{},notified:[],notify:[],notified6h:[]};
 	console.log("writing new file");
 	fs.writeFileSync("store.json", JSON.stringify(store), {encoding: "utf8"});
 }
