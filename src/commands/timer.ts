@@ -96,10 +96,7 @@ export class TimerCommand extends Command {
 	private checkTimers(client: CommandoClient){
 		let store = require("../../store");
 		let channel:any = client.channels.get(config.channel);
-		if (!channel){
-			console.log("Channel doesn't exist");
-			return;
-		}
+		if (!channel){ console.log("no channel"); return; }
 
 		if (!("notified6h" in store)) store.notified6h = [];
 
@@ -117,24 +114,24 @@ export class TimerCommand extends Command {
 				store.notified6h.push(name);
 
 				let guild = this.client.guilds.get(config.guild);
-				if (!guild) return;
+				if (!guild) { console.log("no guild"); return; }
 
 				let raff = guild.members.find("id", "149893533271064576");
-				if (!raff) return;
+				if (!raff) { console.log("no raff"); return; }
 
 				channel.send(`**${name}** timer will expire in 6 hours. <@${raff.id}>`);
 
 				let voiceChannels = guild.channels.filter(channel => channel.type === "voice") as Collection<string, VoiceChannel>;
-				if (!voiceChannels) return;
+				if (!voiceChannels) { console.log("no voice channels"); return; }
 
 				let activeChannels = voiceChannels.filter(voiceChannel => voiceChannel.joinable && voiceChannel.members.size > 0);
-				if (!activeChannels) return;
+				if (!activeChannels) { console.log("no active voice channels"); return; }
 
 				let popularChannel = activeChannels.sort((a, b) => (a.members.size < b.members.size) ? 1 : (a.members.size > b.members.size) ? -1 : 0).first();
-				if (!popularChannel) return;
+				if (!popularChannel) { console.log("no popular voice channels"); return; }
 
 				popularChannel.join().then(connection => {
-					const dispatcher = connection.playFile("./sounds/6hourwarning.mp3", { volume: 0.65 });
+					const dispatcher = connection.playFile("./sounds/6hourwarning.ogg", { volume: 0.25 });
 					dispatcher.on("end", () => connection.disconnect());
 				}).catch(console.error);
 			}
