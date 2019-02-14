@@ -119,7 +119,7 @@ export class TimerCommand extends Command {
 				let guild = this.client.guilds.get(config.guild);
 				if (!guild) return;
 
-				let raff = guild.members.find("id", "147075197378232320");
+				let raff = guild.members.find("id", "149893533271064576");
 				if (!raff) return;
 
 				channel.send(`**${name}** timer will expire in 6 hours. <@${raff.id}>`);
