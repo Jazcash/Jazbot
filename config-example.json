@@ -1,4 +1,17 @@
 {
+	"apps": [
+		{
+			"name": "HavenBot",
+			"script": "./build/main.js",
+			"watch": true,
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"env_production": {
+				"NODE_ENV": "production"
+			}
+		}
+	],
 	"key": "1234",
 	"channel": "542776093103620164",
 	"guild": "53959631648941410452"
