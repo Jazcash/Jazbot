@@ -106,7 +106,7 @@ export class TimerCommand extends Command {
 				delete store.timers[name];
 				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
 				channel.send(`**${name}** timer expired. ${mentions}`);
-			} else if (diffInMinutes < 60 && !store.notified.includes(name)){
+			} else if (diffInMinutes <= 61 && diffInMinutes >= 59 && !store.notified.includes(name)){
 				store.notified.push(name);
 				channel.send(`**${name}** timer will expire in 1 hour.`);
 			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
