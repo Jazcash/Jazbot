@@ -25,11 +25,11 @@ export class TimerCommand extends Command {
 				},
 				{
 					key: "time",
-					prompt: "Time in hours",
+					prompt: "Time in format such as 7d13h5m",
 					type: "string",
 					default: "",
 					validate: (text: string) => {
-						if (/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?)$/.test(text)){
+						if (/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?(?:(?<minutes>\d+)m)?)$/.test(text)){
 							return true;
 						} else {
 							return "You must provide a time in a format such as 3d5h."
@@ -63,10 +63,8 @@ export class TimerCommand extends Command {
 				}
 			} else {
 				if (time){
-					let {days = 0, hours = 0} = time.match(/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?)$/).groups;
-					let date = new Date();
-					let totalHours = (parseInt(days) * 24) + parseInt(hours);
-					date.setHours(date.getHours() + totalHours);
+					let {days = 0, hours = 0, minutes = 0} = time.match(/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?(?:(?<minutes>\d+)m)?)$/).groups;
+					let date = moment(new Date()).add(days, "days").add(hours, "hours").add(minutes, "minutes");
 					store.timers[name] = date;
 					fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
 					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
@@ -106,12 +104,12 @@ export class TimerCommand extends Command {
 			let diffInMinutes = moment(then).diff(now, "minutes");
 			if (then < now){
 				delete store.timers[name];
-				channel.send(`**${name}** timer expired.`);
+				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
+				channel.send(`**${name}** timer expired. ${mentions}`);
 			} else if (diffInMinutes < 60 && !store.notified.includes(name)){
 				store.notified.push(name);
-				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
-				channel.send(`**${name}** timer will expire in 1 hour. ${mentions}`);
-			} else if (diffInMinutes < 360 && diffInMinutes > 359 && !store.notified6h.includes(name)){
+				channel.send(`**${name}** timer will expire in 1 hour.`);
+			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
 				store.notified6h.push(name);
 
 				let guild = this.client.guilds.get(config.guild);
