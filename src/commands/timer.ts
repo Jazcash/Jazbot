@@ -102,13 +102,13 @@ export class TimerCommand extends Command {
 		for (let name in store.timers){
 			let then = new Date(store.timers[name]);
 			let diffInMinutes = moment(then).diff(now, "minutes");
+			let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
 			if (then < now){
 				delete store.timers[name];
-				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
-				channel.send(`**${name}** timer expired. ${mentions}`);
-			} else if (diffInMinutes <= 61 && diffInMinutes >= 59 && !store.notified.includes(name)){
+				channel.send(`**${name}** timer expired.`);
+			} else if (diffInMinutes <= 11 && diffInMinutes >= 9 && !store.notified.includes(name)){
 				store.notified.push(name);
-				channel.send(`**${name}** timer will expire in 1 hour.`);
+				channel.send(`**${name}** timer will expire in 10 minutes ${mentions}`);
 			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
 				store.notified6h.push(name);
 
