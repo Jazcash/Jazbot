@@ -16,6 +16,7 @@ export class TimerCommand extends Command {
 			memberName: "timer",
 			description: "Multiple custom timers",
 			examples: ["timers", "timer magicbeans 2d12h", "timer magicbeans"],
+			argsPromptLimit: 0,
 			args: [
 				{
 					key: "name",
@@ -34,13 +35,13 @@ export class TimerCommand extends Command {
 						} else {
 							return "You must provide a time in a format such as 3d5h."
 						}
-					}
+					},
 				},
 			]
 		});
 
 		client.setInterval(() => {
-			this.checkTimers(client);
+			this.checkTimers();
 		}, 10000)
 	}
 
@@ -66,7 +67,7 @@ export class TimerCommand extends Command {
 					let {days = 0, hours = 0, minutes = 0} = time.match(/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?(?:(?<minutes>\d+)m)?)$/).groups;
 					let date = moment(new Date()).add(days, "days").add(hours, "hours").add(minutes, "minutes");
 					store.timers[name] = date;
-					fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
+					fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
 					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
 					return msg.say(`**${name}** timer added. Expires in ${timeRemaining}.`);
 				} else {
@@ -91,9 +92,9 @@ export class TimerCommand extends Command {
 		}
 	}
 
-	private checkTimers(client: CommandoClient){
+	private checkTimers(){
 		let store = require("../../store");
-		let channel:any = client.channels.get(config.channel);
+		let channel:any = this.client.channels.get(config.channel);
 		if (!channel){ console.log("no channel"); return; }
 
 		if (!("notified6h" in store)) store.notified6h = [];
@@ -108,7 +109,23 @@ export class TimerCommand extends Command {
 				channel.send(`**${name}** timer expired.`);
 			} else if (diffInMinutes <= 11 && diffInMinutes >= 9 && !store.notified.includes(name)){
 				store.notified.push(name);
-				channel.send(`**${name}** timer will expire in 10 minutes ${mentions}`);
+				channel.send(`**${name}** timer will expire in 10 minutes`);
+
+				let guild = this.client.guilds.get(config.guild);
+				if (!guild) { console.log("no guild"); return; }
+				let voiceChannels = guild.channels.filter(channel => channel.type === "voice") as Collection<string, VoiceChannel>;
+				if (!voiceChannels) { console.log("no voice channels"); return; }
+
+				let activeChannels = voiceChannels.filter(voiceChannel => voiceChannel.joinable && voiceChannel.members.size > 0);
+				if (!activeChannels) { console.log("no active voice channels"); return; }
+
+				let popularChannel = activeChannels.sort((a, b) => (a.members.size < b.members.size) ? 1 : (a.members.size > b.members.size) ? -1 : 0).first();
+				if (!popularChannel) { console.log("no popular voice channels"); return; }
+
+				popularChannel.join().then(connection => {
+					const dispatcher = connection.playFile("./sounds/10minuteWarning.ogg", { volume: 0.4 });
+					dispatcher.on("end", () => connection.disconnect());
+				}).catch(console.error);
 			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
 				store.notified6h.push(name);
 
@@ -136,6 +153,6 @@ export class TimerCommand extends Command {
 			}
 		}
 
-		fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
+		fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
 	}
 };

@@ -8,13 +8,14 @@ let config = require("../config");
 const havenbot = new CommandoClient({
 	commandPrefix: "!",
 	owner: "147075197378232320",
-	unknownCommandResponse: false
+	unknownCommandResponse: false,
+	nonCommandEditable: false
 });
 
 if (!fs.existsSync("store.json")){
 	let store = {timers:{},notified:[],notify:[],notified6h:[]};
 	console.log("writing new file");
-	fs.writeFileSync("store.json", JSON.stringify(store), {encoding: "utf8"});
+	fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
 }
 
 havenbot.registry

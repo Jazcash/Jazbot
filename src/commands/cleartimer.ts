@@ -10,6 +10,7 @@ export class ClearTimerCommand extends Command {
 			memberName: "cleartimer",
 			description: "Clear a timer by name",
 			examples: ["clear magicbeans"],
+			argsPromptLimit: 0,
 			args: [
 				{
 					key: "name",
@@ -25,7 +26,7 @@ export class ClearTimerCommand extends Command {
 
 		if (name in store.timers){
 			delete store.timers[name];
-			fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
+			fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
 			return msg.say(`Timer cleared.`);
 		} else {
 			return msg.say(`No timer named ${name} exists.`);
