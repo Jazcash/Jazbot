@@ -123,7 +123,7 @@ export class TimerCommand extends Command {
 				if (!popularChannel) { console.log("no popular voice channels"); return; }
 
 				popularChannel.join().then(connection => {
-					const dispatcher = connection.playFile("./sounds/10minuteWarning.ogg", { volume: 0.4 });
+					const dispatcher = connection.playFile("./sounds/10minuteWarning.ogg", { volume: 0.75 });
 					dispatcher.on("end", () => connection.disconnect());
 				}).catch(console.error);
 			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
