@@ -1,5 +1,9 @@
+// !timer name, time, [mentions], [notifications]
+
 export default class Timer{
-	constructor(public endTime:Date){
+
+
+	constructor(public name:string, public endTime:Date, public mentions:string[]){
 
 	}
 

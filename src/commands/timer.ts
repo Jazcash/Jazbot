@@ -111,21 +111,21 @@ export class TimerCommand extends Command {
 				store.notified.push(name);
 				channel.send(`**${name}** timer will expire in 10 minutes`);
 
-				let guild = this.client.guilds.get(config.guild);
-				if (!guild) { console.log("no guild"); return; }
-				let voiceChannels = guild.channels.filter(channel => channel.type === "voice") as Collection<string, VoiceChannel>;
-				if (!voiceChannels) { console.log("no voice channels"); return; }
+				// let guild = this.client.guilds.get(config.guild);
+				// if (!guild) { console.log("no guild"); return; }
+				// let voiceChannels = guild.channels.filter(channel => channel.type === "voice") as Collection<string, VoiceChannel>;
+				// if (!voiceChannels) { console.log("no voice channels"); return; }
 
-				let activeChannels = voiceChannels.filter(voiceChannel => voiceChannel.joinable && voiceChannel.members.size > 0);
-				if (!activeChannels) { console.log("no active voice channels"); return; }
+				// let activeChannels = voiceChannels.filter(voiceChannel => voiceChannel.joinable && voiceChannel.members.size > 0);
+				// if (!activeChannels) { console.log("no active voice channels"); return; }
 
-				let popularChannel = activeChannels.sort((a, b) => (a.members.size < b.members.size) ? 1 : (a.members.size > b.members.size) ? -1 : 0).first();
-				if (!popularChannel) { console.log("no popular voice channels"); return; }
+				// let popularChannel = activeChannels.sort((a, b) => (a.members.size < b.members.size) ? 1 : (a.members.size > b.members.size) ? -1 : 0).first();
+				// if (!popularChannel) { console.log("no popular voice channels"); return; }
 
-				popularChannel.join().then(connection => {
-					const dispatcher = connection.playFile("./sounds/10minuteWarning.ogg", { volume: 0.75 });
-					dispatcher.on("end", () => connection.disconnect());
-				}).catch(console.error);
+				// popularChannel.join().then(connection => {
+				// 	const dispatcher = connection.playFile("./sounds/10minuteWarning.ogg", { volume: 0.75 });
+				// 	dispatcher.on("end", () => connection.disconnect());
+				// }).catch(console.error);
 			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
 				store.notified6h.push(name);
 
