@@ -72,14 +72,14 @@ export class GildCommand extends Command {
 
 		let bonusGildings = gildManager.getGildingsByBonus(attrib).sort((a, b) => b.gilds[attrib] - a.gilds[attrib]);
 		let commonAttrib = gildManager.getCommonAttribute(bonusGildings, attrib);
-		let attribGildings = gildManager.getGildingsByAttrib(bonusGildings, commonAttrib, tailorCredo);
+		//let attribGildings = gildManager.getGildingsByAttrib(bonusGildings, commonAttrib, tailorCredo);
 		let bestEquipment = gildManager.getBestEquipment(slot, commonAttrib);
 
 		if (!bestEquipment){
 			return msg.say("No equipment found for that slot");
 		}
 
-		let table = this.generateTable(bestEquipment, attribGildings, attrib, tailorCredo);
+		let table = this.generateTable(bestEquipment, bonusGildings, attrib, tailorCredo);
 
 		return msg.say(`\`\`\`${table.toString()}\`\`\``);
 	}
