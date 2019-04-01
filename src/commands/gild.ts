@@ -86,7 +86,7 @@ export class GildCommand extends Command {
 
 	generateTable(equipment:Equipment, gildings:Gilding[], attrib:Attribute, tailorCredo:boolean){
 		let table = new AsciiTable(`${equipment.name} - ${equipment.min * 100}% - ${equipment.max * 100}% - (${equipment.attribs.join(", ")})`);
-		table.setHeading("", "Gilding", "Min %", "Max %", `${attrib} Bonus (q10)`);
+		table.setHeading("", "Gilding", "Min %", "Max %", `${attrib} Bonus (q10)`, "Gilding Attributes");
 
 		gildings.forEach((gilding, index) => {
 			let minChance = index === 0 && tailorCredo ? 1 : equipment.min * gilding.min;
@@ -95,7 +95,7 @@ export class GildCommand extends Command {
 			let minChanceStr = `${(minChance * 100).toFixed(1)}%`;
 			let maxChanceStr = `${(maxChance * 100).toFixed(1)}%`;
 
-			table.addRow(index + 1, gilding.name, minChanceStr, maxChanceStr, gilding.gilds[attrib]);
+			table.addRow(index + 1, gilding.name, minChanceStr, maxChanceStr, gilding.gilds[attrib], gilding.attribs.join(", "));
 		});
 
 		table.setAlign(2, AsciiTable.RIGHT);
