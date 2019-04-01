@@ -126,30 +126,6 @@ export class TimerCommand extends Command {
 				// 	const dispatcher = connection.playFile("./sounds/10minuteWarning.ogg", { volume: 0.75 });
 				// 	dispatcher.on("end", () => connection.disconnect());
 				// }).catch(console.error);
-			} else if (diffInMinutes <= 361 && diffInMinutes >= 359 && !store.notified6h.includes(name)){
-				// store.notified6h.push(name);
-
-				// let guild = this.client.guilds.get(config.guild);
-				// if (!guild) { console.log("no guild"); return; }
-
-				// let raff = guild.members.find("id", "149893533271064576");
-				// if (!raff) { console.log("no raff"); return; }
-
-				// channel.send(`**${name}** timer will expire in 6 hours. <@${raff.id}>`);
-
-				// let voiceChannels = guild.channels.filter(channel => channel.type === "voice") as Collection<string, VoiceChannel>;
-				// if (!voiceChannels) { console.log("no voice channels"); return; }
-
-				// let activeChannels = voiceChannels.filter(voiceChannel => voiceChannel.joinable && voiceChannel.members.size > 0);
-				// if (!activeChannels) { console.log("no active voice channels"); return; }
-
-				// let popularChannel = activeChannels.sort((a, b) => (a.members.size < b.members.size) ? 1 : (a.members.size > b.members.size) ? -1 : 0).first();
-				// if (!popularChannel) { console.log("no popular voice channels"); return; }
-
-				// popularChannel.join().then(connection => {
-				// 	const dispatcher = connection.playFile("./sounds/6hourwarning.ogg", { volume: 0.25 });
-				// 	dispatcher.on("end", () => connection.disconnect());
-				// }).catch(console.error);
 			}
 		}
 

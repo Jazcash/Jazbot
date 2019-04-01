@@ -1,0 +1,919 @@
+[
+	{
+		"name": "Felt Hat",
+		"slot": "1L",
+		"attribs": [
+			"Agility",
+			"Charisma",
+			"Sewing"
+		],
+		"min": 0.3,
+		"max": 0.4,
+		"avg": 0.35
+	},
+	{
+		"name": "Straw Hat",
+		"slot": "1L",
+		"attribs": [
+			"Farming"
+		],
+		"min": 0.1,
+		"max": 0.25,
+		"avg": 0.175
+	},
+	{
+		"name": "Fisherman's Hat",
+		"slot": "1L",
+		"attribs": [
+			"Will",
+			"Survival",
+			"Lore"
+		],
+		"min": 0.15,
+		"max": 0.25,
+		"avg": 0.2
+	},
+	{
+		"name": "Ant Crown",
+		"slot": "1L",
+		"attribs": [
+			"Strength",
+			"Will",
+			"Carpentry"
+		],
+		"min": 0.5,
+		"max": 0.75,
+		"avg": 0.625
+	},
+	{
+		"name": "Laddie's Cap",
+		"slot": "1L",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.1,
+		"max": 0.3,
+		"avg": 0.2
+	},
+	{
+		"name": "Sprucecap",
+		"slot": "1L",
+		"attribs": [
+			"Survival"
+		],
+		"min": 0.05,
+		"max": 0.2,
+		"avg": 0.125
+	},
+	{
+		"name": "Adder Crown",
+		"slot": "1L",
+		"attribs": [
+			"Charisma",
+			"Dexterity",
+			"Stealth"
+		],
+		"min": 0.25,
+		"max": 0.4,
+		"avg": 0.325
+	},
+	{
+		"name": "Chef's Hat",
+		"slot": "1L",
+		"attribs": [
+			"Cooking"
+		],
+		"min": 0.01,
+		"max": 0.35,
+		"avg": 0.18
+	},
+	{
+		"name": "Beaver Cap",
+		"slot": "1L",
+		"attribs": [
+			"Agility",
+			"Carpentry",
+			"Exploration"
+		],
+		"min": 0.2,
+		"max": 0.4,
+		"avg": 0.3
+	},
+	{
+		"name": "Feather Band",
+		"slot": "1L",
+		"attribs": [
+			"Agility",
+			"Perception"
+		],
+		"min": 0.15,
+		"max": 0.3,
+		"avg": 0.225
+	},
+	{
+		"name": "Lawspeaker's Hat",
+		"slot": "1L",
+		"attribs": [
+			"Charisma"
+		],
+		"min": 0.2,
+		"max": 0.3,
+		"avg": 0.25
+	},
+	{
+		"name": "Pointed Cap",
+		"slot": "1L",
+		"attribs": [
+			"Charisma",
+			"Sewing",
+			"Farming"
+		],
+		"min": 0.2,
+		"max": 0.5,
+		"avg": 0.35
+	},
+	{
+		"name": "Woodsman's Ushanka",
+		"slot": "1L",
+		"attribs": [
+			"Agility"
+		],
+		"min": 0.1,
+		"max": 0.25,
+		"avg": 0.175
+	},
+	{
+		"name": "Leather Merchant's Hat",
+		"slot": "1L",
+		"attribs": [
+			"Charisma"
+		],
+		"min": 0.1,
+		"max": 0.3,
+		"avg": 0.2
+	},
+	{
+		"name": "Royal Crown",
+		"slot": "1L",
+		"attribs": [
+			"Charisma",
+			"Psyche",
+			"Smithing"
+		],
+		"min": 0.45,
+		"max": 0.6,
+		"avg": 0.525
+	},
+	{
+		"name": "Fox Hat",
+		"slot": "1L",
+		"attribs": [
+			"Agility",
+			"Exploration"
+		],
+		"min": 0.1,
+		"max": 0.25,
+		"avg": 0.175
+	},
+	{
+		"name": "Woodland Crown",
+		"slot": "1L",
+		"attribs": [
+			"Charisma",
+			"Psyche",
+			"Exploration"
+		],
+		"min": 0.35,
+		"max": 0.5,
+		"avg": 0.425
+	},
+	{
+		"name": "Chieftain's Hat",
+		"slot": "1L",
+		"attribs": [
+			"Charisma"
+		],
+		"min": 0.2,
+		"max": 0.35,
+		"avg": 0.275
+	},
+	{
+		"name": "Beaver Crown",
+		"slot": "1L",
+		"attribs": [
+			"Strength",
+			"Will",
+			"Carpentry"
+		],
+		"min": 0.5,
+		"max": 0.75,
+		"avg": 0.625
+	},
+	{
+		"name": "Cylinder Hat",
+		"slot": "1L",
+		"attribs": [
+			"Charisma"
+		],
+		"min": 0.2,
+		"max": 0.45,
+		"avg": 0.325
+	},
+	{
+		"name": "Lynx Cape",
+		"slot": "1L&8L",
+		"attribs": [
+			"Agility",
+			"Survival"
+		],
+		"min": 0.1,
+		"max": 0.32,
+		"avg": 0.21
+	},
+	{
+		"name": "Wolf Cape",
+		"slot": "1L&8L",
+		"attribs": [
+			"Agility",
+			"Survival",
+			"Strength"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Reindeer Cape",
+		"slot": "1L&8L",
+		"attribs": [
+			"Agility",
+			"Survival",
+			"Farming"
+		],
+		"min": 0.2,
+		"max": 0.4,
+		"avg": 0.3
+	},
+	{
+		"name": "Ranger's Cape",
+		"slot": "1L&8L",
+		"attribs": [
+			"Stealth"
+		],
+		"min": 0.2,
+		"max": 0.5,
+		"avg": 0.35
+	},
+	{
+		"name": "Bear Cape",
+		"slot": "1L&8L",
+		"attribs": [
+			"Strength",
+			"Survival"
+		],
+		"min": 0.1,
+		"max": 0.32,
+		"avg": 0.21
+	},
+	{
+		"name": "Walrus Cape",
+		"slot": "1L&8L",
+		"attribs": [
+			"Will",
+			"Survival"
+		],
+		"min": 0.15,
+		"max": 0.3,
+		"avg": 0.225
+	},
+	{
+		"name": "Badger Hide Vest",
+		"slot": "2L|2R",
+		"attribs": [
+			"Survival"
+		],
+		"min": 0,
+		"max": 0.35,
+		"avg": 0.175
+	},
+	{
+		"name": "Reindeer Parka",
+		"slot": "2L|2R",
+		"attribs": [
+			"Agility",
+			"Survival",
+			"Farming"
+		],
+		"min": 0.1,
+		"max": 0.45,
+		"avg": 0.275
+	},
+	{
+		"name": "Nettle Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Survival"
+		],
+		"min": 0.05,
+		"max": 0.25,
+		"avg": 0.15
+	},
+	{
+		"name": "Moose Hide Jacket",
+		"slot": "2L|2R",
+		"attribs": [
+			"Survival",
+			"Exploration"
+		],
+		"min": 0.2,
+		"max": 0.4,
+		"avg": 0.3
+	},
+	{
+		"name": "Ashen Robes",
+		"slot": "2L|6L",
+		"attribs": [
+			"Psyche",
+			"Stealth"
+		],
+		"min": 0.1,
+		"max": 0.4,
+		"avg": 0.25
+	},
+	{
+		"name": "Wool Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Farming"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Ranger's Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Exploration",
+			"Stealth"
+		],
+		"min": 0,
+		"max": 0.55,
+		"avg": 0.275
+	},
+	{
+		"name": "Mohair Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Sewing",
+			"Farming"
+		],
+		"min": 0.3,
+		"max": 0.45,
+		"avg": 0.375
+	},
+	{
+		"name": "Hunter's Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.25,
+		"max": 0.45,
+		"avg": 0.35
+	},
+	{
+		"name": "Hemp Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Linen Shirt",
+		"slot": "2L|2R",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Woodsman's Tunic",
+		"slot": "2L|2R",
+		"attribs": [
+			"Strength",
+			"Carpentry"
+		],
+		"min": 0.18,
+		"max": 0.36,
+		"avg": 0.27
+	},
+	{
+		"name": "Clothier's Thimble",
+		"slot": "5L|5R",
+		"attribs": [
+			"Dexterity",
+			"Sewing"
+		],
+		"min": 0.2,
+		"max": 0.3,
+		"avg": 0.25
+	},
+	{
+		"name": "Occult Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Psyche",
+			"Dexterity",
+			"Lore"
+		],
+		"min": 0.25,
+		"max": 0.35,
+		"avg": 0.3
+	},
+	{
+		"name": "Ring of Brodgar (Jewelry)",
+		"slot": "5L|5R",
+		"attribs": [
+			"Psyche",
+			"Agility"
+		],
+		"min": 0.2,
+		"max": 0.25,
+		"avg": 0.225
+	},
+	{
+		"name": "Silver for the Ferryman",
+		"slot": "5L|5R",
+		"attribs": [
+			"Intelligence",
+			"Lore"
+		],
+		"min": 0.25,
+		"max": 0.4,
+		"avg": 0.325
+	},
+	{
+		"name": "Druid's Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Psyche",
+			"Will",
+			"Lore",
+			"Farming"
+		],
+		"min": 0.3,
+		"max": 0.4,
+		"avg": 0.35
+	},
+	{
+		"name": "Cave Coral Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Dexterity",
+			"Masonry",
+			"Lore"
+		],
+		"min": 0.2,
+		"max": 0.25,
+		"avg": 0.225
+	},
+	{
+		"name": "Forge Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Smithing"
+		],
+		"min": 0.15,
+		"max": 0.3,
+		"avg": 0.225
+	},
+	{
+		"name": "Thane's Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Charisma",
+			"Strength"
+		],
+		"min": 0.2,
+		"max": 0.35,
+		"avg": 0.275
+	},
+	{
+		"name": "Beast Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Strength",
+			"Agility"
+		],
+		"min": 0.15,
+		"max": 0.2,
+		"avg": 0.175
+	},
+	{
+		"name": "Merchant's Ring",
+		"slot": "5L|5R",
+		"attribs": [
+			"Charisma",
+			"Intelligence"
+		],
+		"min": 0.15,
+		"max": 0.25,
+		"avg": 0.2
+	},
+	{
+		"name": "Lawspeaker's Robes",
+		"slot": "6L",
+		"attribs": [
+			"Charisma",
+			"Sewing"
+		],
+		"min": 0.2,
+		"max": 0.45,
+		"avg": 0.325
+	},
+	{
+		"name": "Merchant's Robe",
+		"slot": "6L",
+		"attribs": [
+			"Charisma"
+		],
+		"min": 0.2,
+		"max": 0.35,
+		"avg": 0.275
+	},
+	{
+		"name": "Fur Cloak",
+		"slot": "6L",
+		"attribs": [
+			"Survival",
+			"Exploration"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Leather Coat",
+		"slot": "6L",
+		"attribs": [
+			"Agility",
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.4,
+		"avg": 0.275
+	},
+	{
+		"name": "Hide Cloak",
+		"slot": "6L",
+		"attribs": [
+			"Survival"
+		],
+		"min": 0.1,
+		"max": 0.3,
+		"avg": 0.2
+	},
+	{
+		"name": "Scarlet Gown",
+		"slot": "6L",
+		"attribs": [
+			"Charisma",
+			"Melee"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Kozhukh",
+		"slot": "6L",
+		"attribs": [
+			"Agility",
+			"Survival",
+			"Farming"
+		],
+		"min": 0.3,
+		"max": 0.5,
+		"avg": 0.4
+	},
+	{
+		"name": "Plain Tabard",
+		"slot": "6L",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.3,
+		"avg": 0.225
+	},
+	{
+		"name": "Bear Coat",
+		"slot": "6L",
+		"attribs": [
+			"Survival",
+			"Strength",
+			"Melee"
+		],
+		"min": 0.3,
+		"max": 0.5,
+		"avg": 0.4
+	},
+	{
+		"name": "Toga",
+		"slot": "6L",
+		"attribs": [
+			"Charisma",
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.3,
+		"avg": 0.225
+	},
+	{
+		"name": "Hermine Cloak",
+		"slot": "6L",
+		"attribs": [
+			"Charisma",
+			"Psyche",
+			"Sewing"
+		],
+		"min": 0.45,
+		"max": 0.65,
+		"avg": 0.55
+	},
+	{
+		"name": "Druid's Cloak",
+		"slot": "6L&1L",
+		"attribs": [
+			"Farming",
+			"Psyche"
+		],
+		"min": 0.35,
+		"max": 0.65,
+		"avg": 0.5
+	},
+	{
+		"name": "Merchant's Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Charisma",
+			"Sewing"
+		],
+		"min": 0.35,
+		"max": 0.65,
+		"avg": 0.5
+	},
+	{
+		"name": "Nettle Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Survival"
+		],
+		"min": 0.05,
+		"max": 0.25,
+		"avg": 0.15
+	},
+	{
+		"name": "Wool Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Farming"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Hemp Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Seal Hide Hoses",
+		"slot": "7L|7R",
+		"attribs": [
+			"Agility",
+			"Survival",
+			"Perception"
+		],
+		"min": 0.1,
+		"max": 0.4,
+		"avg": 0.25
+	},
+	{
+		"name": "Molehide Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Masonry",
+			"Strength"
+		],
+		"min": 0.25,
+		"max": 0.45,
+		"avg": 0.35
+	},
+	{
+		"name": "Linen Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Ranger's Pants",
+		"slot": "7L|7R",
+		"attribs": [
+			"Exploration",
+			"Stealth"
+		],
+		"min": 0.25,
+		"max": 0.55,
+		"avg": 0.4
+	},
+	{
+		"name": "Hermine Cape",
+		"slot": "8L",
+		"attribs": [
+			"Charisma",
+			"Melee"
+		],
+		"min": 0.35,
+		"max": 0.5,
+		"avg": 0.425
+	},
+	{
+		"name": "Hirdsman's Cape",
+		"slot": "8L",
+		"attribs": [
+			"Melee"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Heraldic Cape",
+		"slot": "8L",
+		"attribs": [
+			"Sewing"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Straw Cape",
+		"slot": "8L",
+		"attribs": [
+			"Farming"
+		],
+		"min": 0.1,
+		"max": 0.2,
+		"avg": 0.15
+	},
+	{
+		"name": "Bat Wing",
+		"slot": "8L",
+		"attribs": [
+			"Stealth"
+		],
+		"min": 0.1,
+		"max": 0.3,
+		"avg": 0.2
+	},
+	{
+		"name": "Swan Feather Cape",
+		"slot": "8L",
+		"attribs": [
+			"Agility",
+			"Exploration"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Ant Queen's Wings",
+		"slot": "8L|6R",
+		"attribs": [
+			"Agility",
+			"Unarmed",
+			"Lore"
+		],
+		"min": 0.35,
+		"max": 0.8,
+		"avg": 0.575
+	},
+	{
+		"name": "Clogs",
+		"slot": "8R",
+		"attribs": [
+			"Carpentry"
+		],
+		"min": 0.05,
+		"max": 0.15,
+		"avg": 0.1
+	},
+	{
+		"name": "Leather Boots",
+		"slot": "8R",
+		"attribs": [
+			"Agility"
+		],
+		"min": 0.2,
+		"max": 0.35,
+		"avg": 0.275
+	},
+	{
+		"name": "Rusalka's Water Moccasins",
+		"slot": "8R",
+		"attribs": [
+			"Psyche",
+			"Exploration"
+		],
+		"min": 0.5,
+		"max": 0.85,
+		"avg": 0.675
+	},
+	{
+		"name": "Walrus Boots",
+		"slot": "8R",
+		"attribs": [
+			"Strength",
+			"Charisma",
+			"Survival"
+		],
+		"min": 0.2,
+		"max": 0.45,
+		"avg": 0.325
+	},
+	{
+		"name": "Bunny Slippers",
+		"slot": "8R",
+		"attribs": [
+			"Agility"
+		],
+		"min": 0.05,
+		"max": 0.2,
+		"avg": 0.125
+	},
+	{
+		"name": "Ranger's Boots",
+		"slot": "8R",
+		"attribs": [
+			"Agility",
+			"Stealth"
+		],
+		"min": 0.2,
+		"max": 0.45,
+		"avg": 0.325
+	},
+	{
+		"name": "Wolverine Boots",
+		"slot": "8R",
+		"attribs": [
+			"Agility",
+			"Will",
+			"Exploration",
+			"Lore"
+		],
+		"min": 0.15,
+		"max": 0.4,
+		"avg": 0.275
+	},
+	{
+		"name": "Fur Boots",
+		"slot": "8R",
+		"attribs": [
+			"Agility"
+		],
+		"min": 0.15,
+		"max": 0.35,
+		"avg": 0.25
+	},
+	{
+		"name": "Snakeskin Boots",
+		"slot": "8R",
+		"attribs": [
+			"Agility",
+			"Stealth",
+			"Melee"
+		],
+		"min": 0.15,
+		"max": 0.5,
+		"avg": 0.325
+	}
+]

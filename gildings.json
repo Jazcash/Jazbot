@@ -1,0 +1,779 @@
+[
+	{
+		"name": "Ancient Tooth",
+		"min": 0.3,
+		"max": 0.65,
+		"attribs": [
+			"Agility"
+		],
+		"gilds": {
+			"Carpentry": 15,
+			"Cooking": 12,
+			"Melee": 9,
+			"Masonry": 6
+		},
+		"avg": 0.475
+	},
+	{
+		"name": "Bark Reinforcement",
+		"min": 0.5,
+		"max": 0.9,
+		"attribs": [
+			"Survival",
+			"Unarmed"
+		],
+		"gilds": {
+			"Unarmed": 1
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Bear Fur Trimmings",
+		"min": 0.2,
+		"max": 0.85,
+		"attribs": [
+			"Sewing",
+			"Strength",
+			"Survival",
+			"Melee"
+		],
+		"gilds": {
+			"Strength": 1,
+			"Melee": 1,
+			"Unarmed": 1
+		},
+		"avg": 0.525
+	},
+	{
+		"name": "Bear Tooth",
+		"min": 0.2,
+		"max": 0.6,
+		"attribs": [
+			"Strength"
+		],
+		"gilds": {
+			"Strength": 2
+		},
+		"avg": 0.4
+	},
+	{
+		"name": "Blacksmith's Bauble",
+		"min": 0.2,
+		"max": 0.8,
+		"attribs": [
+			"Strength",
+			"Smithing"
+		],
+		"gilds": {
+			"Strength": 1,
+			"Melee": 2,
+			"Smithing": 3
+		},
+		"avg": 0.5
+	},
+	{
+		"name": "Boarhide Lining",
+		"min": 0.35,
+		"max": 0.75,
+		"attribs": [
+			"Strength",
+			"Unarmed",
+			"Survival"
+		],
+		"gilds": {
+			"Constitution": 1,
+			"Unarmed": 4,
+			"Cooking": 2
+		},
+		"avg": 0.55
+	},
+	{
+		"name": "Bone Pins",
+		"min": 0.35,
+		"max": 1,
+		"attribs": [
+			"Stealth"
+		],
+		"gilds": {
+			"Stealth": 5
+		},
+		"avg": 0.675
+	},
+	{
+		"name": "Chef's Pin",
+		"min": 0.4,
+		"max": 1,
+		"attribs": [
+			"Cooking"
+		],
+		"gilds": {
+			"Cooking": 5
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Chitin Sequins",
+		"min": 0.6,
+		"max": 0.95,
+		"attribs": [
+			"Will",
+			"Agility",
+			"Survival"
+		],
+		"gilds": {
+			"Cooking": 3,
+			"Carpentry": 2,
+			"Stealth": 1
+		},
+		"avg": 0.775
+	},
+	{
+		"name": "Copper Scales",
+		"min": 0.45,
+		"max": 1,
+		"attribs": [
+			"Strength",
+			"Smithing"
+		],
+		"gilds": {
+			"Strength": 2,
+			"Smithing": 3,
+			"Lore": 6
+		},
+		"avg": 0.725
+	},
+	{
+		"name": "Cornbraid",
+		"min": 0.5,
+		"max": 0.95,
+		"attribs": [
+			"Charisma",
+			"Farming"
+		],
+		"gilds": {
+			"Perception": 1,
+			"Cooking": 2,
+			"Farming": 3
+		},
+		"avg": 0.725
+	},
+	{
+		"name": "Extra Stitches",
+		"min": 0.4,
+		"max": 1,
+		"attribs": [
+			"Agility",
+			"Charisma",
+			"Sewing"
+		],
+		"gilds": {
+			"Cooking": 2,
+			"Survival": 2,
+			"Unarmed": 2
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Fancy Buckle",
+		"min": 0.35,
+		"max": 0.9,
+		"attribs": [
+			"Melee"
+		],
+		"gilds": {
+			"Agility": 2,
+			"Melee": 4
+		},
+		"avg": 0.625
+	},
+	{
+		"name": "Feather Stuffing",
+		"min": 0.3,
+		"max": 0.9,
+		"attribs": [
+			"Exploration",
+			"Sewing"
+		],
+		"gilds": {
+			"Agility": 1,
+			"Exploration": 2,
+			"Stealth": 3
+		},
+		"avg": 0.6
+	},
+	{
+		"name": "Feather Trinket",
+		"min": 0.5,
+		"max": 1,
+		"attribs": [
+			"Farming"
+		],
+		"gilds": {
+			"Dexterity": 1,
+			"Farming": 3
+		},
+		"avg": 0.75
+	},
+	{
+		"name": "Felt Inlay",
+		"min": 0.45,
+		"max": 0.85,
+		"attribs": [
+			"Charisma",
+			"Sewing"
+		],
+		"gilds": {
+			"Sewing": 1,
+			"Stealth": 2
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Fine Feather Brooch",
+		"min": 0.6,
+		"max": 0.9,
+		"attribs": [
+			"Charisma",
+			"Lore",
+			"Sewing",
+			"Will"
+		],
+		"gilds": {
+			"Lore": 3,
+			"Masonry": 2,
+			"Unarmed": 2,
+			"Will": 1
+		},
+		"avg": 0.75
+	},
+	{
+		"name": "Finebone Trinkets",
+		"min": 0.4,
+		"max": 0.9,
+		"attribs": [
+			"Survival",
+			"Sewing",
+			"Agility"
+		],
+		"gilds": {
+			"Melee": 2,
+			"Stealth": 1,
+			"Will": 1
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Forager's Brooch",
+		"min": 0.4,
+		"max": 1,
+		"attribs": [
+			"Exploration"
+		],
+		"gilds": {
+			"Perception": 1,
+			"Exploration": 2
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Foul Smoke",
+		"min": 0.2,
+		"max": 0.8,
+		"attribs": [
+			"Psyche",
+			"Stealth"
+		],
+		"gilds": {
+			"Intelligence": 5,
+			"Psyche": 2,
+			"Stealth": 3
+		},
+		"avg": 0.5
+	},
+	{
+		"name": "Glass Beads",
+		"min": 0.4,
+		"max": 0.9,
+		"attribs": [
+			"Exploration"
+		],
+		"gilds": {
+			"Perception": 5
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Greased Joints",
+		"min": 0.5,
+		"max": 0.95,
+		"attribs": [
+			"Dexterity",
+			"Sewing",
+			"Survival"
+		],
+		"gilds": {
+			"Agility": 1,
+			"Dexterity": 2,
+			"Marksmanship": 3
+		},
+		"avg": 0.725
+	},
+	{
+		"name": "Hard Metal Rivets",
+		"min": 0.25,
+		"max": 0.85,
+		"attribs": [
+			"Charisma"
+		],
+		"gilds": {
+			"Melee": 3,
+			"Carpentry": 3
+		},
+		"avg": 0.55
+	},
+	{
+		"name": "Heartwood Leaves",
+		"min": 0.3,
+		"max": 0.9,
+		"attribs": [
+			"Psyche",
+			"Farming"
+		],
+		"gilds": {
+			"Perception": 5,
+			"Farming": 5,
+			"Cooking": 5
+		},
+		"avg": 0.6
+	},
+	{
+		"name": "Hemp Fibre Finery",
+		"min": 0.4,
+		"max": 0.9,
+		"attribs": [
+			"Agility",
+			"Charisma",
+			"Farming"
+		],
+		"gilds": {
+			"Strength": 1,
+			"Agility": 1,
+			"Farming": 3
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Hide Layer",
+		"min": 0.45,
+		"max": 0.85,
+		"attribs": [
+			"Exploration",
+			"Sewing",
+			"Survival"
+		],
+		"gilds": {
+			"Unarmed": 2,
+			"Melee": 2,
+			"Survival": 2
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Leather Patch",
+		"min": 0.4,
+		"max": 1,
+		"attribs": [
+			"Survival"
+		],
+		"gilds": {
+			"Exploration": 3,
+			"Survival": 3
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Lynx Claws",
+		"min": 0.3,
+		"max": 0.65,
+		"attribs": [
+			"Agility"
+		],
+		"gilds": {
+			"Agility": 2
+		},
+		"avg": 0.475
+	},
+	{
+		"name": "Magpie's Thieving Claw",
+		"min": 0.2,
+		"max": 0.5,
+		"attribs": [
+			"Stealth"
+		],
+		"gilds": {
+			"Stealth": 3,
+			"Intelligence": 2
+		},
+		"avg": 0.35
+	},
+	{
+		"name": "Metal Buttons",
+		"min": 0.4,
+		"max": 0.9,
+		"attribs": [
+			"Sewing"
+		],
+		"gilds": {
+			"Unarmed": 3,
+			"Smithing": 1
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Mohair Monogram",
+		"min": 0.35,
+		"max": 0.9,
+		"attribs": [
+			"Strength",
+			"Charisma",
+			"Sewing"
+		],
+		"gilds": {
+			"Sewing": 6,
+			"Melee": 4
+		},
+		"avg": 0.625
+	},
+	{
+		"name": "Mole's Pawbone",
+		"min": 0.45,
+		"max": 0.8,
+		"attribs": [
+			"Agility",
+			"Masonry",
+			"Survival"
+		],
+		"gilds": {
+			"Masonry": 3,
+			"Exploration": 2,
+			"Perception": 1
+		},
+		"avg": 0.625
+	},
+	{
+		"name": "Moose Antler Buttons",
+		"min": 0.3,
+		"max": 0.95,
+		"attribs": [
+			"Sewing",
+			"Strength",
+			"Survival"
+		],
+		"gilds": {
+			"Unarmed": 4,
+			"Will": 2,
+			"Agility": 1
+		},
+		"avg": 0.625
+	},
+	{
+		"name": "Patterned Embroidery",
+		"min": 0.3,
+		"max": 0.9,
+		"attribs": [
+			"Sewing"
+		],
+		"gilds": {
+			"Sewing": 5,
+			"Unarmed": 3,
+			"Strength": 1
+		},
+		"avg": 0.6
+	},
+	{
+		"name": "Petraglyph",
+		"min": 0.5,
+		"max": 0.95,
+		"attribs": [
+			"Masonry",
+			"Lore"
+		],
+		"gilds": {
+			"Intelligence": 1,
+			"Masonry": 2,
+			"Lore": 3
+		},
+		"avg": 0.725
+	},
+	{
+		"name": "Plumb-Bob",
+		"min": 0.45,
+		"max": 0.95,
+		"attribs": [
+			"Intelligence",
+			"Exploration",
+			"Masonry"
+		],
+		"gilds": {
+			"Intelligence": 1,
+			"Masonry": 4,
+			"Smithing": 2
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Polished Porphyry Beads",
+		"min": 0.4,
+		"max": 0.9,
+		"attribs": [
+			"Charisma",
+			"Masonry"
+		],
+		"gilds": {
+			"Strength": 1,
+			"Masonry": 2
+		},
+		"avg": 0.65
+	},
+	{
+		"name": "Precious Details",
+		"min": 0.1,
+		"max": 0.8,
+		"attribs": [
+			"Agility"
+		],
+		"gilds": {
+			"Intelligence": 3,
+			"Charisma": 5
+		},
+		"avg": 0.45
+	},
+	{
+		"name": "Quilted Wadding",
+		"min": 0.2,
+		"max": 1,
+		"attribs": [
+			"Charisma",
+			"Sewing"
+		],
+		"gilds": {
+			"Dexterity": 3,
+			"Sewing": 5
+		},
+		"avg": 0.6
+	},
+	{
+		"name": "Reinforced Hem",
+		"min": 0.25,
+		"max": 1,
+		"attribs": [
+			"Strength",
+			"Survival"
+		],
+		"gilds": {
+			"Constitution": 2,
+			"Unarmed": 3,
+			"Marksmanship": 4
+		},
+		"avg": 0.625
+	},
+	{
+		"name": "Rock Crystal",
+		"min": 0,
+		"max": 0.75,
+		"attribs": [
+			"Psyche",
+			"Melee"
+		],
+		"gilds": {
+			"Strength": 2,
+			"Melee": 6
+		},
+		"avg": 0.375
+	},
+	{
+		"name": "Rough Guard Patch",
+		"min": 0.4,
+		"max": 1,
+		"attribs": [
+			"Agility",
+			"Survival",
+			"Sewing"
+		],
+		"gilds": {
+			"Perception": 1,
+			"Survival": 2,
+			"Marksmanship": 3
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Shipwreck Buttons",
+		"min": 0.6,
+		"max": 0.95,
+		"attribs": [
+			"Psyche",
+			"Sewing",
+			"Stealth"
+		],
+		"gilds": {
+			"Intelligence": 2,
+			"Psyche": 2,
+			"Lore": 4
+		},
+		"avg": 0.775
+	},
+	{
+		"name": "Silken Ribbon",
+		"min": 0.3,
+		"max": 0.9,
+		"attribs": [
+			"Agility"
+		],
+		"gilds": {
+			"Intelligence": 2,
+			"Charisma": 5,
+			"Sewing": 5
+		},
+		"avg": 0.6
+	},
+	{
+		"name": "Silkspun Seam",
+		"min": 0.5,
+		"max": 1,
+		"attribs": [
+			"Charisma"
+		],
+		"gilds": {
+			"Agility": 3,
+			"Psyche": 2
+		},
+		"avg": 0.75
+	},
+	{
+		"name": "Snakeskin Stripes",
+		"min": 0.5,
+		"max": 0.95,
+		"attribs": [
+			"Will",
+			"Lore",
+			"Stealth"
+		],
+		"gilds": {
+			"Intelligence": 1,
+			"Will": 2,
+			"Stealth": 3
+		},
+		"avg": 0.725
+	},
+	{
+		"name": "Spun Gluethread",
+		"min": 0.1,
+		"max": 0.8,
+		"attribs": [
+			"Agility"
+		],
+		"gilds": {
+			"Agility": 3
+		},
+		"avg": 0.45
+	},
+	{
+		"name": "Taproot Lacing",
+		"min": 0.45,
+		"max": 0.95,
+		"attribs": [
+			"Survival"
+		],
+		"gilds": {
+			"Survival": 2
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Twig of Spruce",
+		"min": 0.6,
+		"max": 0.9,
+		"attribs": [
+			"Charisma",
+			"Survival",
+			"Exploration"
+		],
+		"gilds": {
+			"Survival": 1,
+			"Lore": 1
+		},
+		"avg": 0.75
+	},
+	{
+		"name": "Wax-Impregnated Lining",
+		"min": 0.5,
+		"max": 1,
+		"attribs": [
+			"Exploration"
+		],
+		"gilds": {
+			"Exploration": 5
+		},
+		"avg": 0.75
+	},
+	{
+		"name": "Wolf's Claw",
+		"min": 0.25,
+		"max": 0.65,
+		"attribs": [
+			"Strength"
+		],
+		"gilds": {
+			"Strength": 1,
+			"Agility": 1
+		},
+		"avg": 0.45
+	},
+	{
+		"name": "Woodsman's Token",
+		"min": 0.5,
+		"max": 0.95,
+		"attribs": [
+			"Charisma",
+			"Exploration",
+			"Carpentry",
+			"Lore"
+		],
+		"gilds": {
+			"Carpentry": 3,
+			"Lore": 2
+		},
+		"avg": 0.725
+	},
+	{
+		"name": "Wool Cloth Collar",
+		"min": 0.45,
+		"max": 0.95,
+		"attribs": [
+			"Dexterity",
+			"Charisma",
+			"Sewing"
+		],
+		"gilds": {
+			"Charisma": 3,
+			"Constitution": 3,
+			"Sewing": 3
+		},
+		"avg": 0.7
+	},
+	{
+		"name": "Wool Stuffing",
+		"min": 0.4,
+		"max": 1,
+		"attribs": [
+			"Agility",
+			"Sewing"
+		],
+		"gilds": {
+			"Constitution": 1,
+			"Marksmanship": 5
+		},
+		"avg": 0.7
+	}
+]
