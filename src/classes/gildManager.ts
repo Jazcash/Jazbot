@@ -1,8 +1,10 @@
 import { Attribute, Gilding, Equipment } from "./interfaces";
 
 export default class GildManager{
-	constructor(public gildings:Gilding[], public equipments:Equipment[]){
+	equipments:Equipment[] = [];
 
+	constructor(public gildings:Gilding[], equipments?:Equipment[]){
+		if (equipments) this.equipments = equipments;
 	}
 
 	getEquipmentsBySlot(slot:string) : Equipment[]{

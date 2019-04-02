@@ -6,12 +6,6 @@ import GildManager from "../classes/gildManager";
 
 let AsciiTable = require('ascii-table');
 
-/*
-	!gild 2L unarmed
-
-
-*/
-
 export class GildCommand extends Command {
 	gildings: Gilding[] = [];
 	equipment: Equipment[] = [];
