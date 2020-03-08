@@ -5,7 +5,7 @@ import { CommandoClient } from 'discord.js-commando';
 
 let config = require("../config");
 
-const havenbot = new CommandoClient({
+const jazbot = new CommandoClient({
 	commandPrefix: "!",
 	owner: "147075197378232320",
 	unknownCommandResponse: false
@@ -17,17 +17,17 @@ if (!fs.existsSync("store.json")){
 	fs.writeFileSync("store.json", JSON.stringify(store), {encoding: "utf8"});
 }
 
-havenbot.registry
+jazbot.registry
 	.registerGroups([
 		['misc', 'Various commands']
 	])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
-havenbot.on("ready", () => {
-	console.log("HavenBot is ready!");
+jazbot.on("ready", () => {
+	console.log("Jazbot is ready!");
 });
 
-havenbot.on("error", console.error);
+jazbot.on("error", console.error);
 
-havenbot.login(config.discordkey);
+jazbot.login(config.key);

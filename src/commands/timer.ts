@@ -2,8 +2,10 @@ import * as fs from "fs";
 import { Message } from "discord.js";
 import { Command, CommandMessage, CommandoClient } from "discord.js-commando";
 import * as moment from "moment";
-let AsciiTable = require('ascii-table');
+
+const AsciiTable = require('ascii-table');
 const humanizeDuration = require('humanize-duration');
+const timestring = require("timestring");
 
 let config = require("../../config");
 
@@ -25,14 +27,15 @@ export class TimerCommand extends Command {
 				},
 				{
 					key: "time",
-					prompt: "Time in hours",
+					prompt: "Timestring as per https://www.npmjs.com/package/timestring",
 					type: "string",
 					default: "",
 					validate: (text: string) => {
-						if (/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?)$/.test(text)){
+						try {
+							let time = timestring(text);
 							return true;
-						} else {
-							return "You must provide a time in a format such as 3d5h."
+						} catch (err){
+							return err.message;
 						}
 					}
 				},
@@ -45,10 +48,10 @@ export class TimerCommand extends Command {
 	}
 
 	public run(msg: CommandMessage, { name, time }:{name:string, time:any}): Promise<Message | Message[]> {
-		let channel = msg.guild.channels.get(config.channel);
-		if (channel && msg.channel !== channel){
-			return msg.say(`I only work in the ${channel.name} channel.`);
-		}
+		// let channel = msg.guild.channels.(config.channel);
+		// if (channel && msg.channel !== channel){
+		// 	return msg.say(`I only work in the ${channel.name} channel.`);
+		// }
 
 		let store = require("../../store");
 
@@ -63,10 +66,7 @@ export class TimerCommand extends Command {
 				}
 			} else {
 				if (time){
-					let {days = 0, hours = 0} = time.match(/^(?:((?<days>\d+)d)?(?:(?<hours>\d+)h)?)$/).groups;
-					let date = new Date();
-					let totalHours = (parseInt(days) * 24) + parseInt(hours);
-					date.setHours(date.getHours() + totalHours);
+					let date = new Date().setMilliseconds(timestring(time, "ms"));
 					store.timers[name] = date;
 					fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
 					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
@@ -110,7 +110,8 @@ export class TimerCommand extends Command {
 			} else if (moment(then).diff(now, "minutes") < 60 && !store.notified.includes(name)){
 				store.notified.push(name);
 				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
-				channel.send(`**${name}** timer will expire in 1 hour. ${mentions}`);
+				let timeRemaining = humanizeDuration(moment(then).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
+				channel.send(`**${name}** timer will expire in ${timeRemaining}. ${mentions}`);
 			}
 		}
 
