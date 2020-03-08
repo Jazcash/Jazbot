@@ -12,12 +12,13 @@
     "humanize-duration": "^3.22.0",
     "moment": "^2.24.0",
     "node-opus": "^0.3.3",
+    "source-map-support": "^0.5.16",
     "timestring": "^6.0.0"
   },
   "scripts": {
     "start": "node ./build/main.js",
-    "watch": "tsc --w",
-    "build": "tsc"
+    "watch": "rm -rf build/ && tsc --w",
+    "build": "rm -rf build/ && tsc"
   },
   "repository": {
     "type": "git",

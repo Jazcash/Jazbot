@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { Message } from "discord.js";
+import { Message, Collection, VoiceChannel } from "discord.js";
 import { Command, CommandMessage, CommandoClient } from "discord.js-commando";
 import * as moment from "moment";
 
@@ -18,6 +18,7 @@ export class TimerCommand extends Command {
 			memberName: "timer",
 			description: "Multiple custom timers",
 			examples: ["timers", "timer magicbeans 2d12h", "timer magicbeans"],
+			argsPromptLimit: 0,
 			args: [
 				{
 					key: "name",
@@ -37,13 +38,13 @@ export class TimerCommand extends Command {
 						} catch (err){
 							return err.message;
 						}
-					}
+					},
 				},
 			]
 		});
 
 		client.setInterval(() => {
-			this.checkTimers(client);
+			this.checkTimers();
 		}, 10000)
 	}
 
@@ -61,15 +62,15 @@ export class TimerCommand extends Command {
 					return msg.say(`Timer for that name already exists.`);
 				} else {
 					let date = new Date(store.timers[name]);
-					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
+					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm', 's'], round: true });
 					return msg.say(`**${name}** timer will expire in ${timeRemaining}`);
 				}
 			} else {
 				if (time){
 					let date = new Date().setMilliseconds(timestring(time, "ms"));
 					store.timers[name] = date;
-					fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
-					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
+					fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
+					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm', 's'], round: true });
 					return msg.say(`**${name}** timer added. Expires in ${timeRemaining}.`);
 				} else {
 					return msg.say(`You must provide a time in a format such as 3d5h.`);
@@ -82,7 +83,8 @@ export class TimerCommand extends Command {
 
 				for (let name in store.timers){
 					let date = new Date(store.timers[name]);
-					let timeRemaining = humanizeDuration(moment(date).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
+					let time = moment(date).diff(new Date());
+					let timeRemaining = time > 0 ? humanizeDuration(time, { units: ['d', 'h', 'm', 's'], round: true }) : "Ended";
 					table.addRow(name, timeRemaining);
 				}
 
@@ -93,28 +95,29 @@ export class TimerCommand extends Command {
 		}
 	}
 
-	private checkTimers(client: CommandoClient){
+	private checkTimers(){
 		let store = require("../../store");
-		let channel:any = client.channels.get(config.channel);
-		if (!channel){
-			console.log("Channel doesn't exist");
-			return;
-		}
+		let channel:any = this.client.channels.get(config.channel);
+		if (!channel){ console.log("no channel"); return; }
+
+		if (!("notified6h" in store)) store.notified6h = [];
 
 		let now = new Date();
 		for (let name in store.timers){
 			let then = new Date(store.timers[name]);
+			let diffInMinutes = moment(then).diff(now, "minutes");
+			let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
 			if (then < now){
 				delete store.timers[name];
 				channel.send(`**${name}** timer expired.`);
-			} else if (moment(then).diff(now, "minutes") < 60 && !store.notified.includes(name)){
+			} else if (diffInMinutes <= 11 && diffInMinutes >= 9 && !store.notified.includes(name)){
 				store.notified.push(name);
 				let mentions = store.notify.map((id:string) => `<@${id}>`).join(", ");
-				let timeRemaining = humanizeDuration(moment(then).diff(new Date()), { units: ['d', 'h', 'm'], round: true });
+				let timeRemaining = humanizeDuration(moment(then).diff(new Date()), { units: ['d', 'h', 'm', 's'], round: true });
 				channel.send(`**${name}** timer will expire in ${timeRemaining}. ${mentions}`);
 			}
 		}
 
-		fs.writeFile("store.json", JSON.stringify(store), {encoding: "utf8"}, () => {});
+		fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
 	}
 };

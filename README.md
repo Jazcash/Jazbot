@@ -1,1 +1,1 @@
-# HavenBot
+# Jazbot
