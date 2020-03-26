@@ -23,8 +23,8 @@
   },
   "scripts": {
     "start": "node ./build/main.js",
-    "dev": "npx webpack --config webpack.config.js --watch",
-    "build": "npx webpack --config webpack.config.js",
+    "dev": "node ./node_modules/webpack-cli/bin/cli --watch",
+    "build": "node ./node_modules/webpack-cli/bin/cli",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src/**/*.ts",
     "lint-fix": "node ./node_modules/eslint/bin/eslint.js ./src/**/*.ts --fix"
   },
