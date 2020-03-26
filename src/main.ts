@@ -14,7 +14,7 @@ import { WfListCommand } from "./commands/warfork/wflist";
 
 
 const jazbot = new CommandoClient({
-    commandPrefix: "$",
+    commandPrefix: "!",
     owner: "147075197378232320",
     unknownCommandResponse: false,
     nonCommandEditable: true
