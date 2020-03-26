@@ -4,26 +4,44 @@
   "version": "1.0.0",
   "dependencies": {
     "@types/argparse": "^1.0.38",
+    "@types/configstore": "^4.0.0",
     "@types/node": "^13.9.0",
     "@types/request-promise-native": "^1.0.17",
     "ascii-table": "0.0.9",
+    "configstore": "^5.0.1",
     "discord.js": "^11.6.1",
     "discord.js-commando": "^0.10.0",
     "humanize-duration": "^3.22.0",
     "moment": "^2.24.0",
     "node-opus": "^0.3.3",
     "source-map-support": "^0.5.16",
-    "timestring": "^6.0.0"
+    "timestring": "^6.0.0",
+    "ts-loader": "^6.2.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
-    "start": "node ./build/main.js",
-    "watch": "rm -rf build/ && tsc --w",
-    "build": "rm -rf build/ && tsc"
+    "start": "node ./dist/bundle.js",
+    "dev": "npx webpack --config webpack.config.js --watch",
+    "build": "npx webpack --config webpack.config.js",
+    "lint": "node ./node_modules/eslint/bin/eslint.js ./src/**/*.ts",
+    "lint-fix": "node ./node_modules/eslint/bin/eslint.js ./src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jazcash/jazbot-discord.git"
   },
   "author": "Jazcash",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/humanize-duration": "^3.18.0",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
+    "eslint-plugin-unused-imports": "^0.1.2"
+  }
 }

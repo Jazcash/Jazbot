@@ -1,16 +1,13 @@
 {
 	"compilerOptions": {
-		"target": "es2017",
-		"module": "commonjs",
-		"strict": true,
-		"noImplicitAny": true,
-		"rootDir": "src",
-		"outDir": "build",
-		"watch": false,
-		"sourceMap": true,
-		"skipLibCheck": true
-	},
-	"exclude": [
-		"node_modules"
-	]
+		"target": "es6",
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"rootDir": "./src",
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	}
 }

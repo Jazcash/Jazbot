@@ -1,38 +1,45 @@
-require('source-map-support').install();
 
-import * as path from "path";
 import * as fs from "fs";
-
 import { CommandoClient } from 'discord.js-commando';
 
-let config = require("../config");
+import config from "../config.json";
+import { TimerCommand } from "./commands/misc/timer";
+import { RollCommand } from "./commands/misc/roll";
+import { TimerNotifyCommand } from "./commands/misc/timernotify";
+import { ClearTimerCommand } from "./commands/misc/cleartimer";
+import { SoundCommand } from "./commands/misc/sound";
+import { SoundsCommand } from "./commands/misc/sounds";
+import { WfCommand } from "./commands/warfork/wfinfo";
+import { WfListCommand } from "./commands/warfork/wflist";
+
 
 const jazbot = new CommandoClient({
-	commandPrefix: "!",
-	owner: "147075197378232320",
-	unknownCommandResponse: false,
-	nonCommandEditable: false
+    commandPrefix: "$",
+    owner: "147075197378232320",
+    unknownCommandResponse: false,
+    nonCommandEditable: true
 });
 
 if (!fs.existsSync("store.json")){
-	let store = {timers:{},notified:[],notify:[],notified6h:[]};
-	console.log("writing new file");
-	fs.writeFile("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"}, () => {});
+    const store = {timers:{},notified:[],notify:[],notified6h:[]};
+    console.log("writing new file");
+    fs.writeFileSync("store.json", JSON.stringify(store, null, "\t"), {encoding: "utf8"});
 }
 
 jazbot.registry
-	.registerGroups([
-		['misc', 'Various commands']
-	])
-	.registerDefaults()
-	.registerCommandsIn(path.join(__dirname, 'commands'));
+    .registerGroups([
+        ['misc', 'Various commands'],
+        ["warfork", "Warfork commands"]
+    ])
+    .registerDefaults()
+    .registerCommands([TimerCommand, TimerNotifyCommand, ClearTimerCommand, RollCommand, SoundCommand, SoundsCommand, WfCommand, WfListCommand])
 
 jazbot.on("ready", () => {
-	console.log("Jazbot is ready!");
+    console.log("Jazbot is ready!");
 });
 
 jazbot.on("error", (err) => {
-	console.log(err);
+    console.log(err);
 });
 
 jazbot.login(config.key);

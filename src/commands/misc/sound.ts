@@ -19,10 +19,10 @@ export class SoundCommand extends Commando.Command {
         });
     }
 
-    public run(msg: Commando.CommandMessage, { name }: {name:string}): any {
-        let vc = msg.member.voiceChannel;
+    public run(msg: Commando.CommandMessage, { name }: {name: string}): any {
+        const vc = msg.member.voiceChannel;
 
-        if (!vc) return msg.reply("You need to be connected to a voice channel");
+        if (!vc) {return msg.reply("You need to be connected to a voice channel");}
 
         if (!fs.existsSync(`./sounds/${name}.ogg`)){
             return msg.reply(`File named ${name} does not exist`);
