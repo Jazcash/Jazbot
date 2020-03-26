@@ -22,7 +22,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
-    "start": "node ./dist/bundle.js",
+    "start": "node ./build/main.js",
     "dev": "npx webpack --config webpack.config.js --watch",
     "build": "npx webpack --config webpack.config.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src/**/*.ts",
