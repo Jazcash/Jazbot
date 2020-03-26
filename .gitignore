@@ -61,3 +61,4 @@ build
 
 config.json
 /store.json
+/dist
