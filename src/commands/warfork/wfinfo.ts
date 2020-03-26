@@ -21,7 +21,7 @@ export class WfCommand extends Commando.Command {
             name: "wfinfo",
             group: "warfork",
             memberName: "wfinfo",
-            description: "Get server info",
+            description: "Get Warfork server info",
             examples: ["wfinfo jazcash.com"],
             args: [
                 {

@@ -26,7 +26,7 @@ export class WfListCommand extends Commando.Command {
             name: "wflist",
             group: "warfork",
             memberName: "wflist",
-            description: "Gets list of server",
+            description: "Gets a list of Warfork servers",
             examples: ["wflist"]
         });
     }
