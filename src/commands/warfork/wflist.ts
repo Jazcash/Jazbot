@@ -43,6 +43,8 @@ export class WfListCommand extends Commando.Command {
 
         const str = this.formatServerList(serverInfos);
 
+        console.log(str);
+
         return msg.say(str);
     }
 
@@ -151,7 +153,7 @@ export class WfListCommand extends Commando.Command {
         return {
             ip,
             port,
-            title: JSON.stringify(rawServerInfo.sv_hostname).replace(/\"|\^\d|e\\b.*/g, ""),
+            title: JSON.stringify(rawServerInfo.sv_hostname).replace(/\"|\^\d|\\u.*/g, ""),
             version: rawServerInfo.version,
             isPrivate: rawServerInfo.g_needpass === "1",
             isInstagib: rawServerInfo.g_instagib === "1",
