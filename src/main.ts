@@ -1,4 +1,3 @@
-
 import * as fs from "fs";
 import { CommandoClient } from 'discord.js-commando';
 
@@ -11,6 +10,7 @@ import { SoundCommand } from "./commands/misc/sound";
 import { SoundsCommand } from "./commands/misc/sounds";
 import { WfCommand } from "./commands/warfork/wfinfo";
 import { WfListCommand } from "./commands/warfork/wflist";
+import { ToggleMuteCommand } from "./commands/misc/togglemute";
 
 
 const jazbot = new CommandoClient({
@@ -32,7 +32,7 @@ jazbot.registry
         ["warfork", "Warfork commands"]
     ])
     .registerDefaults()
-    .registerCommands([TimerCommand, TimerNotifyCommand, ClearTimerCommand, RollCommand, SoundCommand, SoundsCommand, WfCommand, WfListCommand])
+    .registerCommands([TimerCommand, TimerNotifyCommand, ClearTimerCommand, RollCommand, SoundCommand, SoundsCommand, WfCommand, WfListCommand, ToggleMuteCommand])
 
 jazbot.on("ready", () => {
     console.log("Jazbot is ready!");
